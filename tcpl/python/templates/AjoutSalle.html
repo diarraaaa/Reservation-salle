@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Ajout_salle.css') }}">
+    <title>AjouterSalle
+
+    </title>
+</head>
+<body> 
+    <form action="/ajout_salle" method="POST" enctype="multipart/form-data">
+        {% if errorphoto1%}
+          <p style="color: red;">{{ errorphoto1 }}</p>
+        {% elif success_message %}
+          <p style="color: rgb(66, 255, 66);">{{ success_message }}</p>
+        {% elif errorphoto2 %}
+          <p style="color: rgb(255, 0, 0);">{{ errorphoto2 }}</p>
+        {% endif %}
+        <h1>AjouterSalle</h1> 
+        <label for="nom">Nom de la salle:</label>
+        <input type="text" name="nom" id="nom" required><br>
+        <label for="capacite">Capacité:</label><br>
+        <input type="number" name="capacite" id="Capacite" required><br><br>
+        <label for="prix">Prix par heure:</label><br>
+        <input type="number" name="prix" id="prix" required><br><br>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" required><br>
+        <label for="Adresse">Adresse</label>
+        <input type="text" name="adresse" id="Adresse" required><br>
+        <label for="option-diponibilité">Disponibilité</label><br>
+        <label><input type="radio" name="option-disponibilité" value="Oui" required> Oui</label>
+        <label><input type="radio" name="option-disponibilité" value="Non" required>Non</label><br><br>
+        <label for="type-salle">Type de salle:</label><br>
+        <select name="type-salle">
+            <option value="">Sélectionnez un type de salle</option>
+            <option value="Salle de conférence">Salle de conférence</option>
+            <option value="Salle de réunion">Salle de réunion</option>
+            <option value="Salle de banquet">Salle de banquet</option>
+            <option value="Salle de formation">Salle de formation</option>
+            <option value="Salle de classe">Salle de classe</option>
+            <option value="Salle d'exposition">Salle d'exposition</option>
+            <option value="Salle de fête">Salle de fête</option>
+            <option value="Salle de spectacle">Salle de spectacle</option>
+            <option value="Salle de réception">Salle de réception</option>
+            <option value="Salle polyvalente">Salle polyvalente</option>
+        </select><br><br>
+        <label for="photo">Photo1(format png ou jpeg)</label><br>
+        <input type="file" name="photo1"><br><br>
+        <label for="photo">Photo2(format png ou jpag)</label><br>
+        <input type="file" name="photo2"><br><br>
+        <input type="submit" value="Ajouter le salle">
+    </form>
+</body>
+</html>

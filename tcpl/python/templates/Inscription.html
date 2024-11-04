@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Connexion.css') }}">
+    <title>Inscription</title>
+</head>
+<body> 
+    <form action="/ajout_client" method="post">
+        {% if error_message %}
+          <p style="color: red;">{{ error_message }}</p>
+        {% elif success_message %}
+          <p style="color: green;">{{ success_message }}</p>
+        {% endif %}
+        <h1>Inscription</h1> 
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" required><br>
+        <label for="prenom">Prenom :</label>
+        <input type="text" name="prenom" id="prenom" required><br>
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" required><br>
+        <label for="email">Adresse mail :</label>
+        <input type="email" name="email" id="email" required><br>
+        <input type="submit" value="S'inscrire">
+        Vous possedez un  compte?
+        <a href="/Connexion">Connectez vous</a><br>
+    </form>
+</body>
+</html>

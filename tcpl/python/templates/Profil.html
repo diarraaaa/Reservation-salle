@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Profil.css') }}">
+    <title>Profil</title>
+</head>
+<body> 
+  <header> 
+    <a href="/timeline">Acceuil</a>
+  </header>
+    <form action="/modifierprofil" method="post">
+        {% if error_message %}
+          <p style="color: red;">{{ error_message }}</p>
+        {% elif success_message %}
+          <p style="color: green;">{{ success_message }}</p>
+        {% endif %}
+        <h1>Profil</h1> 
+        <label for="newpass">Nouveau mot de passe:</label>
+        <input type="text" name="newpass" id="newpass" required><br>
+        <input type="submit" value="Valider">
+    </form>
+</body>
+</html>

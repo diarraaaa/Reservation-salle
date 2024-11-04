@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Timeline.css') }}">
+    <title>Timeline</title>
+</head>
+<body> 
+    <header> 
+        <a href="/Profil"> Mon compte </a>
+     {% if sess_username %}
+          <p style="color: rgb(0, 0, 0);font-weight: bolder;">{{ sess_username }}</p>
+     {% endif %} 
+    </header>
+    <div class="container">
+        {% for salle in salles %} 
+            <div class="salle"> 
+                <h2>Nom:{{ salle[2] }}</h2>
+                <p>Capacité:{{ salle[3] }} personnes</p>
+                <p>Prix:{{salle[1]}} Francs CFA</p>
+                <p> Description:{{ salle[4] }}</p>
+                <p> Adresse:{{ salle[5]}}</p>
+                <p> Disponibilité:{{ salle[6]}}</p>
+                <p> Type:{{ salle[7]}}</p>
+                <div class="img-container">
+                    <img src="{{ salle[9] }}" alt="photo1">
+                    <img src="{{ salle[8] }}" alt="photo2">
+                </div>
+                <form action="/InfoSalle" method="post">
+                    <input type="text" name="id"value="{{salle[0]}}" readonly hidden>
+                    <input type="submit" value="Détails">
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

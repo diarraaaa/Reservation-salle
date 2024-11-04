@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* bleu clair */
+    color: #000; /* noir */
+}
+
+h1 {
+    color: #4169e1; /* bleu royal */
+}
+
+form {
+    background-color: #a8a6a6; /* blanc */
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    color: #4169e1; /* bleu royal */
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4169e1; /* bleu royal */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #001f3f; /* bleu foncé */
+}
+
+p {
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}

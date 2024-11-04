@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='InfoSalle.css') }}">
+    </head>
+    <body>
+        <header> 
+            <a href="/timeline">Les salles</a>
+            <a href="/Profil"> Mon compte </a>
+        </header>
+        {% for det in detail %}
+        <div class="detail"> 
+            <h2>{{ det[2] }}</h2>
+            <p>Capacité:{{ det[3] }} personnes</p>
+            <p>Prix:{{ det[1] }} Francs CFA</p>
+            <p>Description:{{ det[4] }}</p>
+            <p>Adresse:{{ det[5] }}</p>
+            <p>Disponibilité:{{ det[6] }}</p>
+            <p>Type:{{ det[7] }}</p>
+            <div class="img-container">
+                <img src="{{ det[9] }}" alt="photo1">
+                <img src="{{ det[8] }}" alt="photo2">
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>

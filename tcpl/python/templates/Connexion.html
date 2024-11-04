@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Connexion.css') }}">
+    <title>Connection</title>
+</head>
+<body> 
+    <form action="/seconnecter" method="post">
+        {% if error_message %}
+          <p style="color: red;">{{ error_message }}</p>
+        {% elif success_message %}
+          <p style="color: green;">{{ success_message }}</p>
+        {% endif %}
+        <h1>Connection</h1> 
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Mot de passe :</label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Se connecter">
+        Pas de compte?
+        <a href="/Inscription">Inscrivez vous</a><br>
+    </form>
+</body>
+</html>

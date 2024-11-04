@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(15, 134, 163, 0.671); /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte */
+    padding: 20px; /* Espace intérieur du header */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+header a {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none; /* Supprimer la soulignement des liens */
+    font-weight: bold; /* Texte en gras */
+    padding-left: 3px;
+}
+
+header a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+    color: #fff;
+    padding-left: 3px;
+}
+
+form {
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    width: 80%; /* Largeur du formulaire */
+    max-width: 600px; /* Largeur maximale du formulaire */
+}
+
+h1 {
+    text-align: center; /* Centrer le titre du formulaire */
+}
+
+label {
+    display: block; /* Afficher les labels sur une ligne différente */
+    margin-bottom: 5px; /* Espacement entre les labels et les champs de saisie */
+}
+
+input[type="text"] {
+    width: 100%; /* Prendre toute la largeur disponible */
+    padding: 10px; /* Espace intérieur des champs de saisie */
+    margin-bottom: 10px; /* Espacement entre les champs de saisie */
+    box-sizing: border-box; /* Inclure les bordures et le rembourrage dans la largeur */
+}
+
+input[type="submit"] {
+    width: 100%; /* Prendre toute la largeur disponible */
+    padding: 10px; /* Espace intérieur du bouton */
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none; /* Supprimer les bordures du bouton */
+    cursor: pointer; /* Afficher le curseur comme un pointeur au survol */
+}
+
+input[type="submit"]:hover {
+    background-color: #007bff; /* Couleur de fond du bouton au survol */
+}
